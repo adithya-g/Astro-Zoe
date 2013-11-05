@@ -36,7 +36,7 @@ typedef struct drive_arc_command_msg_type {
 } drive_arc_command_msg_type;
     
 #define MESSAGE_NAME_DRIVE_ARC_COMMAND "driveArcCommand"
-#define MESSAGE_FMT_1 "{double, double, double, {string}, {timeval}}"
+#define MESSAGE_FMT_1 "{double, double, double, {[char:20]}, {long, long}}"
     
 typedef struct drive_arc_response_msg_type {
     drive_arc_command_msg_type command;
@@ -46,7 +46,7 @@ typedef struct drive_arc_response_msg_type {
 } drive_arc_response_msg_type;
     
 #define MESSAGE_NAME_DRIVE_ARC_RESPONSE "driveArcResponse"
-#define MESSAGE_FMT_2 "{{double, double, double, {string}, {timeval}}, {int, int}, {string}, {timeval}}"
+#define MESSAGE_FMT_2 "{{double, double, double, {[char:20]}, {long, long}}, {int, int}, {[char:20]}, {long, long}}"
     
 static const char* drive_arc_command_msg_name = "driveArcCommand";
 static const char* drive_arc_response_msg_name = "driveArcResponse";
