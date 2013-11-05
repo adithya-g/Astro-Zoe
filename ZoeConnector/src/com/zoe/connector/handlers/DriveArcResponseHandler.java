@@ -21,7 +21,8 @@ public class DriveArcResponseHandler implements IPC.HANDLER_TYPE {
 
 	public void handle(IPC.MSG_INSTANCE msgRef, Object callData) {
 		DriveArcResponse response = (DriveArcResponse) callData;
-		System.out.println("DriveArcResponseHandler: Receiving " + IPC.msgInstanceName(msgRef) + "[" + callData + "]");
+		// System.out.println("DriveArcResponseHandler: Receiving " +
+		// IPC.msgInstanceName(msgRef) + "[" + callData + "]");
 		processor.postMessageToAndroid(response);
 	}
 }

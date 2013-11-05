@@ -32,4 +32,6 @@ public class Constants {
 
 	public static final Object JSON_RETVAL = "returnValue";
 
+	public static final int SENDER_LENGTH = 20;
+
 }

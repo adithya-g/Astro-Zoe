@@ -13,17 +13,19 @@ import com.zoe.connector.messages.Message;
 
 /**
  * @author Satish
- *
+ * 
  */
 public class MessageProcessor {
-	
+
 	private PrintWriter writer = null;
-	
+
 	public MessageProcessor(PrintWriter writer) {
 		this.writer = writer;
 	}
-	
+
 	/**
+	 * This methods converts the json into a Message and publishes it as an IPC
+	 * message
 	 * 
 	 * @param msgAsJson
 	 */
@@ -34,9 +36,9 @@ public class MessageProcessor {
 		try {
 			jsonObject = ZoeConnectorUtils.stringToJson(msgAsJson);
 			messageName = (String) jsonObject.get(Constants.JSON_MSG_NAME);
-			System.out.println("Message name: " + messageName);
+			System.out.println("Received Message: " + messageName + " from socket");
 			message = MessageFactory.createMessageFromJson(jsonObject);
-			System.out.println("Publishing message " + message);
+			// System.out.println("Publishing message " + message);
 			IPC.publishData(messageName, message);
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -44,13 +46,18 @@ public class MessageProcessor {
 			e.printStackTrace();
 		}
 	}
-	
+
+	/**
+	 * This method converts the message to json and writes back to android
+	 * 
+	 * @param message
+	 */
 	public void postMessageToAndroid(Message message) {
 		String jsonString = null;
-		
+		System.out.println("Posting message to socket");
 		jsonString = MessageFactory.createJsonFromMessage(message);
-		
-		writer.write(jsonString);
+
+		writer.println(jsonString);
 		writer.flush();
 	}
 }

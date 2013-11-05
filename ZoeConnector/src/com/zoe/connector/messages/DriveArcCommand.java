@@ -1,20 +1,22 @@
 package com.zoe.connector.messages;
 
 /**
+ * This class is the model class is used for the drive arc command message
+ * 
  * @author Satish
- *
+ * 
  */
-public class DriveArcCommand extends Message {
-	
-	private double radius;
-	
-	private double speed;
-	
-	private double time;
-	
-	private String sender;
-	
-	private String timestamp;
+public class DriveArcCommand implements Message {
+
+	public double radius;
+
+	public double speed;
+
+	public double time;
+
+	public SenderType sender;
+
+	public TimeType timestamp;
 
 	/**
 	 * @return the radius
@@ -24,7 +26,8 @@ public class DriveArcCommand extends Message {
 	}
 
 	/**
-	 * @param radius the radius to set
+	 * @param radius
+	 *            the radius to set
 	 */
 	public void setRadius(double radius) {
 		this.radius = radius;
@@ -38,7 +41,8 @@ public class DriveArcCommand extends Message {
 	}
 
 	/**
-	 * @param speed the speed to set
+	 * @param speed
+	 *            the speed to set
 	 */
 	public void setSpeed(double speed) {
 		this.speed = speed;
@@ -52,7 +56,8 @@ public class DriveArcCommand extends Message {
 	}
 
 	/**
-	 * @param time the time to set
+	 * @param time
+	 *            the time to set
 	 */
 	public void setTime(double time) {
 		this.time = time;
@@ -61,32 +66,36 @@ public class DriveArcCommand extends Message {
 	/**
 	 * @return the sender
 	 */
-	public String getSender() {
+	public SenderType getSender() {
 		return sender;
 	}
 
 	/**
-	 * @param sender the sender to set
+	 * @param sender
+	 *            the sender to set
 	 */
-	public void setSender(String sender) {
+	public void setSender(SenderType sender) {
 		this.sender = sender;
 	}
 
 	/**
 	 * @return the timestamp
 	 */
-	public String getTimestamp() {
+	public TimeType getTimestamp() {
 		return timestamp;
 	}
 
 	/**
-	 * @param timestamp the timestamp to set
+	 * @param timestamp
+	 *            the timestamp to set
 	 */
-	public void setTimestamp(String timestamp) {
+	public void setTimestamp(TimeType timestamp) {
 		this.timestamp = timestamp;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

@@ -1,14 +1,16 @@
 package com.zoe.connector.messages;
 
 /**
+ * This class is the model class for generic return type
+ * 
  * @author Satish
  * 
  */
 public class GenericReturn {
 
-	private int returnValue;
+	public int returnValue;
 
-	private int isValid;
+	public int isValid;
 
 	/**
 	 * @return the returnValue
@@ -18,7 +20,8 @@ public class GenericReturn {
 	}
 
 	/**
-	 * @param returnValue the returnValue to set
+	 * @param returnValue
+	 *            the returnValue to set
 	 */
 	public void setReturnValue(int returnValue) {
 		this.returnValue = returnValue;
@@ -32,13 +35,16 @@ public class GenericReturn {
 	}
 
 	/**
-	 * @param isValid the isValid to set
+	 * @param isValid
+	 *            the isValid to set
 	 */
 	public void setIsValid(int isValid) {
 		this.isValid = isValid;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

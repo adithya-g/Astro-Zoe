@@ -17,7 +17,7 @@ import com.zoe.connector.processor.MessageProcessor;
  * 
  */
 public class SocketHandler implements IPC.FD_HANDLER_TYPE {
-	
+
 	private BufferedReader reader;
 
 	private MessageProcessor processor;
@@ -35,7 +35,7 @@ public class SocketHandler implements IPC.FD_HANDLER_TYPE {
 				IPC.unsubscribeFD(fd);
 				ZoeConnector.lookForConnection();
 			} else {
-				System.out.println("Received string " + message);
+				// System.out.println("Received string " + message);
 				processor.processAndPostMessage(message);
 			}
 		} catch (IOException e) {

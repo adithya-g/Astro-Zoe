@@ -103,6 +103,8 @@ public class ZoeConnector {
 			IPC.dispatch();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 	}
