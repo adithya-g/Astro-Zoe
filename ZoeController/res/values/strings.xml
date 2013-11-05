@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZoeController</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_battery">Battery</string>
+    <string name="action_connect">Connect</string>
+    <string name="display_latency">Latency information can be shown here</string>
+    <string name="button_configure">Configure</string>
+    <string name="contentdesc_leftnavcam">Image is from left navigation camera</string>
+    <string name="contentdesc_rightnavcam">Image is from right navigation camera</string>
+    <string name="action_configure">configureBtnPressed</string>
+    <string name="display_maximumspeed">Maximum Speed -</string>
+    <string name="display_time">Time -</string>
+	<string name="display_rateofcommand">Rate of command -</string>
+    <string name="display_rateofimage">Rate of image -</string>
+    <string name="display_dimiss">Dismiss</string>
+    <string name="action_dimiss">dismissBtnPressed</string>
+    <string name="display_header">Header</string>
+    <string name="display_settingdetailLblOne">ParameterOne</string>
+    <string name="display_settingdetailLblTwo">ParameterTwo</string>
+    <string name="btn_save">Save</string>
+    <string name="display_settingDetailPlaceholder">Enter value here</string>
+    <string name="key_settingtype">SettingType</string>
+    <string name="value_settingsingle">Single</string>
+    <string name="value_settingrange">Range</string>
+</resources>
